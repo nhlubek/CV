@@ -1,0 +1,193 @@
+% Adapted from https://github.com/gboeing/cv
+
+\documentclass[12pt,letterpaper]{report}
+
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) so accented characters are a single glyph
+\usepackage[utf8]{inputenc} % allow input of utf-8 encoded characters
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[USenglish]{babel} % automatically regionalize hyphens, quote marks, etc
+\usepackage{microtype} % improves text appearance with kerning, etc
+\usepackage{datetime} % enable formatting of date output
+\usepackage{tabto} % make nice tabbing
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{titlesec} % allow custom section fonts
+
+% what is your name?
+\newcommand{\myname}{Niklas Hlubek}
+
+% define a default font face and set it as the body font
+\usepackage{crimson} % document's serif font
+\usepackage{helvet}  % document's sans serif font
+
+% define how far to tab for list items with left-aligned date - different font faces need different widths
+\newcommand{\listtabwidth}{1.75cm}
+
+% set name font to title the document
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*}{20}
+\titleformat{\section}{\sffamily\small\bfseries\lsstyle\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{24pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+
+% set page margins
+\geometry{body={6.5in, 9.0in},
+    left=1.0in,
+    top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% define space between list items
+\newcommand{\listitemspace}{0.15em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+            \setlength{\parskip}{0em}
+            \setlength{\itemsep}{\listitemspace}
+            \setlength{\parsep}{\listitemspace}}}
+    {\end{list}}
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+    labelindent=0em,
+    topsep=0em,
+    partopsep=0em,
+    itemsep=\listitemspace,
+    parsep=\listitemspace,
+    font=\normalfont}
+
+% print the month and year only when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+    colorlinks  = true,
+    urlcolor    = black,
+    pdfauthor   = {\myname},
+    pdfkeywords = {Social Data Science, Epidemiology, Public Health},
+    pdftitle    = {\myname: Curriculum Vitae},
+    pdfsubject  = {Curriculum Vitae},
+    pdfpagemode = UseNone
+}
+
+\begin{document}
+    \raggedright
+
+    % display name as the document title
+    \namefont{\myname}
+
+    % contact info
+    \vspace{1em}
+    \begin{minipage}[t]{0.64\textwidth}
+        Department of Epidemiology \\
+        University Medical Center Utrecht, Utrecht University
+        \\ Utrecht, the Netherlands
+    \end{minipage}
+    \begin{minipage}[t]{0.34\textwidth}
+        e: \href{mailto:n.hlubek@umcutrecht.nl}{n.hlubek@umcutrecht.nl} \\
+        w: \href{https://nhlubek.github.io/}{nhlubek.github.io}
+    \end{minipage}
+    \vspace{0.5em}
+
+    \section*{Education}
+
+    \begin{tablist}
+
+        \item[PhD.]  \tab Epidemiology, Utrecht University, 2025
+
+        \item[MSc.]  \tab Social Policy and Public Health, Utrecht University, 2022
+
+        \item[MSc.]  \tab Psychological Research, University of Edinburgh, 2021
+
+        \item[BSc.]  \tab Psychology, Erasmus University Rotterdam, 2019
+
+    \end{tablist}
+
+    \section*{Professional}
+
+    \begin{tablist}
+    
+    	\item[2023-] \tab University Medical Center, Julius Center for Health Sciences \\
+						  Doctoral Candidate \\
+						  Department of Epidemiology
+
+            \item[2024] \tab ISGlobal Barcelona Institute for Global Health \\
+                             Visiting Researcher \\
+                             Urban Planning, Environment and Health, Air Pollution
+						  
+		\item[2022] \tab Mental Health Europe, Policy and Projects Assistant
+
+            \item[2020] \tab University Medical Center Hamburg Eppendorf \\
+                            Research Assistant  \\
+                            Neuropsychology and Psychotherapy Research Unit \\ Department of Psychiatry and Psychotherapy 
+        
+            \item[2019-20]  \tab Max Planck Institute for Cognitive and Brain Sciences \\
+                          Research Assistant  \\
+                          Department of Neurology
+
+    \end{tablist}
+
+    \section*{Research Interests}
+
+    \begin{itemize}
+
+        \item Social Epidemiology.
+
+        \item ?.
+
+    \end{itemize}
+
+    \section*{Publications}
+    
+    \begin{tablist}
+    
+    	 \item[2024] \tab \textbf{Hlubek, N.}, Koop Y., Wagtendonk A., Vaartjes I. \enquote{Temporal Trends in Air Pollution Exposure across Socioeconomic Groups in the Netherlands.} \textit{Int. J. Environ. Res. Public Health}. \url{https://doi.org/10.3390/ijerph21080976.}.
+	 
+    	 \item[2022] \tab \textbf{Hlubek, N.}, Templeton, A., Wiseman-Gregg, K.  \enquote{A social identity approach to COVID-19 transmission in hospital settings.} \textit{Journal of Applied Social Psychology}. \url{https://doi.org/10.1111/jasp.12948}.
+	     
+    	 \item[2022] \tab Bomke P., \textbf{Hlubek, N.}  \enquote{Entwicklung der Sozialpsychatrie in Europa - die Sicht von Mental Health Europe} \textit{Kerbe - Forum fuer soziale Psuychatrie}.
+	    
+    	 \item[2021] \tab Moritz S., Xie J., Penney D., Biehl L., \textbf{Hlubek, N.}, Elmers J., Beblo T., Hottenrott B. \enquote{The magnitude of neurocognitive impairment is overestimated in depression: the role of motivation, debilitating momentary influences, and the overreliance on mean differences.} \textit{Psychological Medicine}. \url{https://doi.org/10.1017/S0033291721004785}.
+
+    	 \item[2020] \tab Jelinek L., \textbf{Hlubek, N.}, Moritz S., Miegel F., Voderholzer U. \enquote{Zwangsstörungen während COVID-19: Sind Menschen mit Waschzwängen besonders betroffen.} \textit{z-aktuell}. 
+       
+    \end{tablist}
+    
+    \section*{Presentations}
+    
+    \begin{tablist}
+    
+    	 \item[2022] \tab Templeton A., \textbf{Hlubek, N.} \enquote{Social identity processes in hospital workers risk perception and adherence to safety guidance during the COVID-19 pandemic.} Paper presented at the \textbf{BPS Social Psychology Section Annual Conference}
+
+         \item[2021] \tab \textbf{Hlubek, N.}, Templeton A. \enquote{A social identity approach to COVID-19 transmissions in hospital settings – Barriers and avenues to safe behaviour in healthcare workers.} Project presented to the \textbf{Scottish Government COVID-19 Nosocomial Review Group}
+    
+    \end{tablist}
+
+    \section*{Technical Skills}
+
+    \begin{itemize}
+
+        \item \texttt{R} \tab Advanced
+        
+        \item \texttt{Python} \tab novice
+        
+    \end{itemize}
+
+    % display today's date as Month Year after a vertical space below the end of the text
+    \begin{center}
+        %\vspace{6em}
+        \vfill
+        Updated \monthyeardate\today
+    \end{center}
+
+\end{document}
